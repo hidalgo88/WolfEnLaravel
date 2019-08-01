@@ -98,9 +98,9 @@
       @endforeach
       </div>
     </div>
-    {{-- <div class="row justify-content-center">
+    <div class="row justify-content-center">
       {{$products->links()}}
-    </div> --}}
+    </div>
   </div>
 
 

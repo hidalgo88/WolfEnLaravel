@@ -44,14 +44,14 @@
           <button type="submit" class="btn btn-success">Iniciar Sesión</button>
         </div>
 
-        {{-- <div class="row justify-content-center reg">
+        <div class="row justify-content-center reg">
             <div class="col-sm-3">
                 <a href="/login/google" class="btn btn-danger">Ingresar con Google</a>
             </div>
             <div class="col-sm-3">
                 <a href="/login/facebook" class="btn btn-primary">Ingresar con Facebook</a>
             </div>
-        </div> --}}
+        </div>
 
         <div class="row justify-content-end">
           @if (Route::has('password.request'))

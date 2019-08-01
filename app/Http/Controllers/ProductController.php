@@ -79,12 +79,14 @@ class ProductController extends Controller
     $leagues = League::all();
 
     if(isset($_GET['name'])){
-      $products = Product::where('name', 'LIKE', '%'.$_GET['name'].'%')->get();
+      $products = Product::where('name', 'LIKE', '%'.$_GET['name'].'%')
+        ->orderBy('id', 'desc')
+        ->paginate(6);
     } else{
-      $products = Product::all();
+      $products = Product::orderBy('id', 'desc')
+      ->paginate(6);
     }
 
-    $products = $products->sortByDesc('id');
     return view('products')
     ->with([
       'products' => $products,
