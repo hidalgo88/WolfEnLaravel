@@ -41,12 +41,11 @@
       </div>
       <div class="row justify-content-center">
         @if (session('mensaje'))
-        <div class="alert alert-success">
-          {{ session('mensaje') }}
-        </div>
+          <div class="alert alert-success">
+            {{ session('mensaje') }}
+          </div>
         @endif
-
-</div>
+      </div>
 
       <div class="row justify-content-center">
 
@@ -98,11 +97,10 @@
         </div>
       @endforeach
       </div>
-      <div class="row justify-content-center">
-
-      {{ $products->links() }}
     </div>
-    </div>
+    {{-- <div class="row justify-content-center">
+      {{$products->links()}}
+    </div> --}}
   </div>
 
 

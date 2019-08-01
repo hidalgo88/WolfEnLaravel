@@ -39,7 +39,7 @@ class User extends Authenticatable
 
     public function cart()
     {
-      return $this->belongsToMany(Product::class);
+      return $this->belongsToMany(Product::class)->orderByDesc('id');
     }
 
     public function isAdmin()

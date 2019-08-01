@@ -17,7 +17,6 @@ class Product extends Model
   {
     return $this->belongsTo(Size::class);
   }
-
   public function brand()
   {
     return $this->belongsTo(Brand::class);

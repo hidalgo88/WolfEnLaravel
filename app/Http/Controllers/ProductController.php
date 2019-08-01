@@ -74,15 +74,17 @@ class ProductController extends Controller
   }
 
   public function index(){
-    $products = Product::all();
+    // $products = Product::all();
+    // dd($products);
     $leagues = League::all();
 
     if(isset($_GET['name'])){
-      $products = Product::where('name', 'LIKE', '%'.$_GET['name'].'%')->paginate(6);
+      $products = Product::where('name', 'LIKE', '%'.$_GET['name'].'%')->get();
     } else{
-      $products = Product::paginate(6);
+      $products = Product::all();
     }
 
+    $products = $products->sortByDesc('id');
     return view('products')
     ->with([
       'products' => $products,
